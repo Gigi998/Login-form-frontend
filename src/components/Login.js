@@ -35,8 +35,7 @@ const Login = () => {
       const json = JSON.stringify({ user, pwd });
       const response = await axios.post(LOGIN_URL, json);
       const accessToken = response?.data?.accessToken;
-      const roles = response?.data?.roles;
-      setAuth({ user, pwd, roles, accessToken });
+      setAuth({ user, accessToken });
       setUser("");
       setPwd("");
       // Navigate user to location where he wanted to go
