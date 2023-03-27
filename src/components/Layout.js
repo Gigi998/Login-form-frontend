@@ -5,7 +5,9 @@ const Layout = () => {
   const { auth } = useAuthContext();
   return (
     <main className="h-screen w-screen">
-      {/* <h1>{auth.user}</h1> */}
+      <nav className="h-10 bg-blue-500 flex items-center">
+        {auth.user && <h1 className="ml-5 text-2xl">Welcome {auth.user}!</h1>}
+      </nav>
       <Outlet />
     </main>
   );

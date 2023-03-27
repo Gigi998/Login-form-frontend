@@ -10,6 +10,8 @@ const Home = () => {
       <div className="underline flex flex-col gap-3">
         <Link to="editor">Go to editor page</Link>
         <Link to="admin">Go to Admin page</Link>
+        <Link to="employees">Go to Employees page</Link>
+        <Link to="addEmployee">Add new employee</Link>
         <Link to="lounge">Go to lounge page</Link>
         <Link to="linkpage">Go to link page</Link>
       </div>

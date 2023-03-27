@@ -10,6 +10,8 @@ import Admin from "./components/Admin";
 import Lounge from "./components/Lounge";
 import Missing from "./components/Missing";
 import Persist from "./components/Persist";
+import Employees from "./components/Employees";
+import AddEmployee from "./components/AddEmployee";
 import RequireAuth from "./components/RequireAuth";
 
 const ROLES = {
@@ -38,6 +40,12 @@ function App() {
           </Route>
           <Route element={<RequireAuth allowedRoles={[ROLES.Admin]} />}>
             <Route path="admin" element={<Admin />} />
+          </Route>
+          <Route element={<RequireAuth allowedRoles={[ROLES.Admin]} />}>
+            <Route path="employees" element={<Employees />} />
+          </Route>
+          <Route element={<RequireAuth allowedRoles={[ROLES.Admin]} />}>
+            <Route path="addEmployee" element={<AddEmployee />} />
           </Route>
           <Route
             element={<RequireAuth allowedRoles={[ROLES.Admin, ROLES.Editor]} />}
